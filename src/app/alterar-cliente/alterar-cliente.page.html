@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Editar Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-input label="Nome" label-placement="floating" type="text" fill="outline" placeholder="Nome" [(ngModel)]="nome">
+  </ion-input>
+
+  <br>
+
+  <ion-input label="Email" label-placement="floating" fill="outline" type="email" placeholder="Email"
+    [(ngModel)]="email"></ion-input>
+
+  <br>
+
+  <ion-input label="Senha" type="password" label-placement="floating" fill="outline" placeholder="Senha"
+    [(ngModel)]="senha"></ion-input>
+
+  <br>
+
+  <ion-input label="Confirmar Senha" type="password" label-placement="floating" fill="outline"
+    placeholder="Confirmar Senha" [(ngModel)]="confirmarSenha"></ion-input>
+
+  <br>
+
+  <ion-button (click)="salvar()" expand="full">
+    Editar
+  </ion-button>
+
+</ion-content>

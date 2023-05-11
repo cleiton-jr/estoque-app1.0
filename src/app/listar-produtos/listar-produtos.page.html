@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let produto of listaProdutos">
+    <ion-label>
+      <h1>{{produto.titulo}}</h1>
+      <p class="ion-padding-start">{{produto.descricao}}</p>
+      <h1>R$ {{produto.preco}}</h1>
+    </ion-label>
+
+    <ion-button color="warning" (click)="editarProduto(produto.id)">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button color="danger" (click)="excluirProduto(produto.id)">
+      <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <ion-button expand="full" routerLink="/create-produto">
+    Adicionar Produto
+  </ion-button>
+</ion-content>

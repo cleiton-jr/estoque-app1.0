@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Editar Produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-input label="Título" label-placement="floating" type="text" fill="outline" placeholder="Título"
+    [(ngModel)]="titulo">
+  </ion-input>
+
+  <br>
+
+  <ion-input label="Descrição" label-placement="floating" fill="outline" type="text" placeholder="Descrição"
+    [(ngModel)]="descricao"></ion-input>
+
+  <br>
+
+  <ion-input label="Preço" type="number" label-placement="floating" fill="outline" placeholder="Preço"
+    [(ngModel)]="preco"></ion-input>
+
+  <br>
+
+  <ion-input label="Imagem" type="text" label-placement="floating" fill="outline" placeholder="Imagem"
+    [(ngModel)]="imagem"></ion-input>
+
+  <br>
+
+  <ion-button expand="full" (click)="salvar()">
+    Editar
+  </ion-button>
+
+</ion-content>

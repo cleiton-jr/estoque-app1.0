@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h2 *ngIf="listaClientes.length === 0" style="text-align: center; color: red;">NÃO HÁ CLIENTES CADASTRADOS</h2>
+  <ion-item *ngFor="let cliente of listaClientes">
+    <ion-label>
+      <h1>{{cliente.nome}}</h1>
+      <a href="mailto:{{cliente.email}}">{{cliente.email}}</a>
+    </ion-label>
+    <ion-button color="warning" (click)="editarCliente(cliente.id!)">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button color="danger" (click)="excluirCliente(cliente.id!)">
+      <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <br>
+
+  <ion-button expand="full" routerLink="/create-cliente">
+    Adicionar Cliente
+  </ion-button>
+</ion-content>
